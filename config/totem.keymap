@@ -23,46 +23,32 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <200>;
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-    };
-
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        COLEMAKDH {
+            bindings = <
+       &kp Q        &kp W        &kp F       &kp P       &kp B       &kp J      &kp L       &kp U       &kp Y        &kp SEMI
+       &mt A LSHFT  &mt R LCTRL  &mt S LALT  &mt T LCMD  &kp G       &kp M      &mt N RCMD  &mt E RALT  &mt I RCTRL  &mt O RSHFT
+&to 1  &kp Z        &kp X        &kp C       &kp D       &kp V       &kp K      &kp H       &kp COMMA   &kp DOT      &kp FSLH     &kp APOS
+                                 &sl 3       &kp SPACE   &kp BSPC    &kp ENTER  &kp SPACE   &sl 2
+            >;
 
             label = "BASE";
+        };
+
+        QWERTZ {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            label = "BACKUP";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -76,16 +62,14 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q  &kp W  &kp E             &kp R      &kp T               &kp Z          &kp U      &kp I          &kp O    &kp P
-                &kp A  &kp S  &kp D             &kp F      &kp G               &kp H          &kp J      &kp K          &kp L    &kp COMMA
-&kp LEFT_SHIFT  &kp Y  &kp X  &kp C             &kp V      &kp B               &kp N          &kp M      &kp COMMA      &kp DOT  &kp FSLH   &kp RIGHT_SHIFT
-                              &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND    &kp BACKSPACE  &kp SPACE  &kp RIGHT_ALT
+                &kp Q        &kp W        &kp E       &kp R               &kp T            &kp Z      &kp U       &kp I       &kp O       &kp P
+                &mt A LSHFT  &mt S LCTRL  &mt D LALT  &mt F LEFT_COMMAND  &kp G            &kp H      &mt J RCMD  &mt K RALT  &mt L RCMD  &mt COMMA RSHIFT
+&kp LEFT_SHIFT  &kp Y        &kp X        &kp C       &kp V               &kp B            &kp N      &kp M       &kp COMMA   &kp DOT     &kp FSLH          &kp RIGHT_SHIFT
+                                          &sl 3       &kp SPACE           &kp BACKSPACE    &kp ENTER  &kp SPACE   &sl 2
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        nav_layer {
+        NAV_LAYER {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "NAVI";
@@ -105,8 +89,19 @@
         &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
         &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
 &trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &mo 0     &kp KP_N0  &trans
+                               &trans    &trans     &trans      &mo 1     &kp KP_N0  &trans
             >;
+        };
+
+        SYMBOL_LAYER {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "SYM";
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
