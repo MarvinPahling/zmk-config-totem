@@ -11,6 +11,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -71,10 +72,10 @@
         SYMBOL_LAYER_2 {
             label = "SYM2";
             bindings = <
-           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-           &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-                                 &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE
+            &kp N1      &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+            &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&bt BT_PRV  &sys_reset  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &bt BT_CLR_ALL  &bt BT_NXT
+                                   &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE
             >;
         };
 
