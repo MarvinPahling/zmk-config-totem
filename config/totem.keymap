@@ -50,19 +50,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q        &kp W        &kp E          &kp R       &kp T    &kp Z  &kp U          &kp I       &kp O       &kp P
-                &mt LSHFT A  &mt LCTRL S  &mt LALT D     &mt LCMD F  &kp G    &kp H  &mt RCMD J     &mt RALT K  &mt RCMD L  &mt RSHIFT COMMA
-&kp LEFT_SHIFT  &kp Y        &kp X        &kp C          &kp V       &kp B    &kp N  &kp M          &kp COMMA   &kp DOT     &kp FSLH          &kp RIGHT_SHIFT
-                                          &kp BACKSPACE  &kp SPACE   &sl 1    &sl 2  &kp BACKSPACE  &kp RETURN
+                &kp Q        &kp W        &kp E       &kp R       &kp T    &kp Z  &kp U          &kp I       &kp O       &kp P
+                &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LCMD F  &kp G    &kp H  &mt RCMD J     &mt RALT K  &mt RCMD L  &mt RSHIFT COMMA
+&kp LEFT_SHIFT  &kp Y        &kp X        &kp C       &kp V       &kp B    &kp N  &kp M          &kp COMMA   &kp DOT     &kp FSLH          &kp RIGHT_SHIFT
+                                          &kp ESC     &kp SPACE   &sl 1    &sl 2  &kp BACKSPACE  &kp RETURN
             >;
         };
 
         SYMBOL_LAYER_1 {
             bindings = <
-              &kp N7        &kp N8        &kp PIPE         &kp LESS_THAN  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp GREATER_THAN  &kp AMPERSAND  &kp SINGLE_QUOTE   &kp PERCENT
-              &kp NUMBER_4  &kp NUMBER_5  &kp DOLLAR       &kp SLASH      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &kp PERCENT    &kp DOUBLE_QUOTES  &kp DOLLAR
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp EXCLAMATION  &kp MINUS      &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp PLUS          &kp QUESTION   &mt STAR PLUS      &kp AMPERSAND  &kp AT
-                                          &kp SQT          &kp COLON      &kp COLON               &kp PERIOD             &kp SEMI          &kp GRAVE
+           &kp SPACE  &kp AT_SIGN  &kp PIPE         &kp LESS_THAN  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp GREATER_THAN  &kp AMPERSAND  &kp SQT            &kp SPACE
+           &kp SPACE  &kp CARET    &kp DOLLAR       &kp SLASH      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &kp PERCENT    &kp DOUBLE_QUOTES  &kp SPACE
+&kp SPACE  &kp SPACE  &kp SPACE    &kp EXCLAMATION  &kp MINUS      &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp PLUS          &kp QUESTION   &kp TILDE          &kp SPACE  &kp SPACE
+                                   &kp EQUAL        &kp COLON      &kp PERIOD              &kp COMMA              &kp SEMI          &kp HASH
             >;
 
             label = "SYM1";
