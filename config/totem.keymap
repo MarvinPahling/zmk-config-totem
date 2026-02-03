@@ -60,10 +60,10 @@
 
         SYMBOL_LAYER_1 {
             bindings = <
-           &kp SPACE  &kp AT_SIGN  &kp PIPE         &kp LESS_THAN  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp GREATER_THAN  &kp AMPERSAND  &kp SQT            &kp SPACE
-           &kp SPACE  &kp CARET    &kp DOLLAR       &kp SLASH      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &kp PERCENT    &kp DOUBLE_QUOTES  &kp SPACE
-&kp SPACE  &kp SPACE  &kp SPACE    &kp EXCLAMATION  &kp MINUS      &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp PLUS          &kp QUESTION   &kp TILDE          &kp SPACE  &kp SPACE
-                                   &kp EQUAL        &kp COLON      &kp PERIOD              &kp COMMA              &kp SEMI          &kp HASH
+           &kp SPACE       &kp AT_SIGN  &kp PIPE         &kp LESS_THAN  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp GREATER_THAN  &kp AMPERSAND  &kp SQT            &kp SPACE
+           &kp SPACE       &kp CARET    &kp DOLLAR       &kp SLASH      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &kp PERCENT    &kp DOUBLE_QUOTES  &kp SPACE
+&kp SPACE  &bt BT_CLR_ALL  &kp SPACE    &kp EXCLAMATION  &kp MINUS      &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp PLUS          &kp QUESTION   &kp TILDE          &kp SPACE  &kp SPACE
+                                        &kp EQUAL        &kp COLON      &kp PERIOD              &kp COMMA              &kp SEMI          &kp HASH
             >;
 
             label = "SYM1";
