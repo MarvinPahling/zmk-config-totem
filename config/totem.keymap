@@ -52,7 +52,7 @@
             bindings = <
                 &kp Q        &kp W        &kp E       &kp R       &kp T    &kp Z  &kp U          &kp I       &kp O       &kp P
                 &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LCMD F  &kp G    &kp H  &mt RCMD J     &mt RALT K  &mt RCMD L  &mt RSHIFT COMMA
-&kp LEFT_SHIFT  &kp Y        &kp X        &kp C       &kp V       &kp B    &kp N  &kp M          &kp COMMA   &kp DOT     &kp FSLH          &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp Y        &kp X        &kp C       &kp V       &kp B    &kp N  &kp M          &kp PERIOD  &kp COLON   &kp TILDE         &kp RIGHT_SHIFT
                                           &kp ESC     &kp SPACE   &sl 1    &sl 2  &kp BACKSPACE  &kp RETURN
             >;
         };
